@@ -1,0 +1,100 @@
+.viewPage {
+  width: 100%;
+  min-height: 100vh;
+  @include flex();
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 5rem;
+
+  >section {
+    width: 100%;
+    height: 100%;
+    @include flex(row, center, center, 3rem);
+    flex-wrap: wrap;
+
+    >figure {
+      max-width: 20rem;
+      width: 100%;
+      height: 25rem;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex: none;
+      border-radius: 10px;
+
+      >img {
+
+        width: 16rem;
+        height: 19rem;
+        object-fit: cover;
+
+        &:hover {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+    }
+
+    .infoCol {
+      padding: 0 2rem;
+      width: 100%;
+      max-width: 27rem;
+      @include flex(column, center, flex-start, 0.6rem);
+
+      >p {
+        font-size: 1.3rem
+      }
+
+      .quantity {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        >p {
+          font-size: 30px
+        }
+
+        .btn {
+          @include flex();
+          width: 3rem;
+          height: 2rem;
+          border: none;
+          cursor: pointer;
+          background-color: gray;
+          border-radius: 5px;
+          font-size: 1.2rem;
+
+          &:hover {
+            background-color: $color2;
+            color: $color1;
+          }
+        }
+
+        .addBtn {
+          width: 100%;
+          max-width: 160px;
+          padding: 0.5rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          font-size: 1.2rem;
+          background: #0e70ad;
+          border: none;
+          border-radius: 10px;
+        }
+      }
+
+
+
+    }
+
+  }
+
+}

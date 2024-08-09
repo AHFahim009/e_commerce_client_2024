@@ -1,0 +1,161 @@
+.productManagePage {
+  width: 100%;
+  height: 100vh;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  padding: 2rem;
+
+  >section {
+    position: relative;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 400px;
+    height: 85vh;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.216);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    >h1 {
+      @include heading();
+      text-align: center
+    }
+
+    ;
+
+    >strong {
+      font-weight: 300;
+    }
+
+    >p {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    >img {
+      max-width: 100%;
+      height: 80%;
+      object-fit: cover;
+    }
+
+    >span {
+      position: absolute;
+      top: 10px;
+      right: 34px;
+    }
+
+    form {
+      >div {
+        >input {
+          width: 100%;
+        }
+      }
+
+      figure {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+
+        >img {
+          width: 100%;
+          max-width: 144px;
+          height: 117px;
+          object-fit: contain;
+        }
+      }
+
+      >button {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1.4rem;
+        background: #0e70ad;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+
+
+
+
+
+}
+
+
+
+.manageBook {
+  position: relative;
+
+  .manageDelete {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    z-index: 999;
+
+
+    >button {
+      font-size: 30px;
+      border: none;
+      outline: none;
+      color: rgb(131, 6, 6);
+      cursor: pointer;
+
+
+    }
+
+  }
+}
+
+
+
+.deleteBox {
+  position: absolute;
+  z-index: 999;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: grey;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  >p {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .actionBox {
+    // justify-items: right;
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+
+    .confirmBtn {
+      background-color: green;
+      padding: 0.6rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .cancelBtn {
+      background-color: red;
+      padding: 0.6rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+}

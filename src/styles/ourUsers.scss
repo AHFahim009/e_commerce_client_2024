@@ -1,0 +1,18 @@
+.ourUsersPage {
+  overflow: auto;
+  position: relative;
+  flex-direction: column;
+
+
+  .ourUsersTable {
+    background-color: white;
+    padding: 1rem;
+    overflow-x: auto;
+    @include square(100%);
+
+    >h2 {
+      margin: 1.5rem 0 2rem 0;
+      @include heading()
+    }
+  }
+}

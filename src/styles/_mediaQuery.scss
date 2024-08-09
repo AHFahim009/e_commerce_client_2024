@@ -1,0 +1,69 @@
+@media screen and (max-width: 1200px) {
+  .dashboardContainer {
+    overflow: auto;
+  }
+
+  .sidebar-heading {
+    text-align: center;
+  }
+
+  .adminDashboardContainer {
+
+    .widgetSection,
+    .graphSection,
+    .transactionSection {
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .transactionSection {
+      height: unset;
+    }
+
+    >header {
+      >div {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .dashboardContainer {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+
+@media screen and (max-width:600px) {
+  .productCard {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+// @media screen and (max-width: 500px) {
+//   .dashboardContainer {
+//     .widgetSection {
+//       > article {
+//         min-width: 100%;
+//       }
+//     }
+//     .graphSection {
+//       .productsStock {
+//         min-width: 100%;
+//       }
+//     }
+//     .transactionSection {
+//       .genderChart {
+//         min-width: 100%;
+//       }
+//     }
+//   }
+// }

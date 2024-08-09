@@ -1,0 +1,37 @@
+.paymentPage {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .payment-form {
+    width: 400px;
+
+    >form {
+      width: 100%;
+
+
+      >button {
+        width: 100%;
+        margin-top: 30px;
+        border: none;
+        outline: none;
+        background-color: rgb(34 78 189);
+        color: white;
+        padding: 9px 16px;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(6, 40, 126);
+        }
+      }
+
+
+
+    }
+  }
+}
