@@ -3,7 +3,7 @@
   min-height: 100vh;
   @include flex();
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 5rem;
+  padding-top: 5rem;
 
   >section {
     width: 100%;
@@ -12,8 +12,8 @@
     flex-wrap: wrap;
 
     >figure {
-      max-width: 20rem;
       width: 100%;
+      max-width: 20rem;
       height: 25rem;
       border: 1px solid black;
       display: flex;
