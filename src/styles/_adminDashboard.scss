@@ -54,10 +54,11 @@
   }
 
   .widgetSection {
-    @include flex(row, space-between, stretch, unset);
+    @include flex(row, space-between, stretch, 10px);
     width: 100%;
 
     >article {
+      width: 100%;
       min-width: 20%;
       background-color: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.132);
@@ -116,7 +117,8 @@
     }
 
     .revenueGraph {
-      width: 75%;
+      width: 100%;
+      max-width: 848px;
       padding: 1rem 3rem;
 
       >h2 {
