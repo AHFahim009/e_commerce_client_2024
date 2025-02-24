@@ -17,8 +17,8 @@ const Transaction = () => {
 
   const columns: ColumnDef<TOrderResponse>[] = [
     {
-      header: "Name",
-      accessorKey: "userId.name",
+      header: "User Id",
+      accessorKey: "_id",
     },
     {
       header: "Amount",
@@ -48,8 +48,8 @@ const Transaction = () => {
               status === "Processing"
                 ? "red"
                 : status === "Delivered"
-                  ? "purple"
-                  : "green"
+                ? "purple"
+                : "green"
             }
           >
             {status}
@@ -61,31 +61,37 @@ const Transaction = () => {
       header: "Action",
       accessorKey: "action",
       cell: (info) => {
-        return <Link to={`/admin/transaction-management/${info.row.original._id}`}>Manage</Link>
+        return (
+          <Link to={`/admin/transaction-management/${info.row.original._id}`}>
+            Manage
+          </Link>
+        );
       },
     },
   ];
 
   const ordersData = orders?.data || [];
+  console.log(ordersData);
+
   return (
     <div className="transactionPage">
-      {
-        isOrdersLoading ? <SkeltonLoading length={14}></SkeltonLoading> :
-          <>
-            {isError || ordersData.length <= 0 ? (
-              <EmptyMessage message="No transaction available" />
-            ) : (
-              <TableHOC
-                columns={columns}
-                data={ordersData}
-                heading="Transaction"
-                containerClassName="transactionTable"
-                pagination={true}
-              />
-            )}
-
-          </>
-      }
+      {isOrdersLoading ? (
+        <SkeltonLoading length={14}></SkeltonLoading>
+      ) : (
+        <>
+          {isError || ordersData.length <= 0 ? (
+            <EmptyMessage message="No transaction available" />
+          ) : (
+            <TableHOC
+              columns={columns}
+              data={ordersData}
+              heading="Transaction"
+              containerClassName="transactionTable"
+              pagination={true}
+            />
+          )}
+        </>
+      )}
     </div>
   );
 };
